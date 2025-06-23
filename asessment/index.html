@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flex Layout Assessment</title>
+
+  <!-- Linking External CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Font Awesome for Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+<body>
+  <div class="wrapper">
+    <!-- CSS-blurred background using filter -->
+    <div class="blur-background"></div>
+
+    <!-- Main flex layout -->
+    <div class="flex-container">
+      <!-- Left Panel -->
+      <div class="panel left-panel">
+        <i class="fas fa-user-circle fa-4x"></i>
+        <h2>Welcome Back!</h2>
+        <p>Login to access your dashboard</p>
+        <button class="btn" onclick="handleLogin()">Login</button>
+      </div>
+
+      <!-- Right Panel -->
+      <div class="panel right-panel">
+        <h2>Create Account</h2>
+        <div class="social-icons">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-google"></i>
+          <i class="fab fa-twitter"></i>
+        </div>
+        <p>Or register using your email</p>
+        <form onsubmit="return handleSignup(event)">
+          <input type="text" placeholder="Full Name" required />
+          <input type="email" placeholder="Email" required />
+          <input type="password" placeholder="Password" required />
+          <button type="submit" class="btn">Sign Up</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Simple JS interactivity for console -->
+  <script>
+    // Business logic: handle login click
+    function handleLogin() {
+      console.log("Login button clicked");
+      alert("Login clicked!");
+    }
+
+    // Business logic: handle form submit
+    function handleSignup(e) {
+      e.preventDefault();
+      console.log("Signup form submitted");
+      alert("Signup successful!");
+      return false;
+    }
+  </script>
+</body>
+</html>
